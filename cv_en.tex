@@ -1,182 +1,37 @@
-%% start of file `template.tex'.
-%% Copyright 2006-2010 Xavier Danaux (xdanaux@gmail.com).
-%
-% This work may be distributed and/or modified under the
-% conditions of the LaTeX Project Public License version 1.3c,
-% available at http://www.latex-project.org/lppl/.
-
-
 \documentclass[11pt,a4paper]{moderncv}
+\input{tex/def/packages}
+\input{tex/def/geometry}
+\input{tex/def/bibsettings}
 
-% moderncv themes
-%\moderncvtheme[green]{casual}                 % optional argument are 'blue' (default), 'orange', 'red', 'green', 'grey' and 'roman' (for roman fonts, instead of sans serif fonts)
-\moderncvtheme[green]{classic}                % idem
+\input{tex/contents/info}
 
-% character encoding
-\usepackage[utf8]{inputenc}                   % replace by the encoding you are using
-
-% adjust the page margins
-\usepackage[scale=0.85]{geometry}
-\setlength{\hintscolumnwidth}{3cm}						% if you want to change the width of the column with the dates
-\AtBeginDocument{\setlength{\maketitlenamewidth}{6.5cm}}  % only for the classic theme, if you want to change the width of your name placeholder (to leave more space for your address details
-\AtBeginDocument{\recomputelengths}                     % required when changes are made to page layout lengths
-
-% personal data
-\firstname{\huge Damien}
-\familyname{\huge DOSIMONT}
-%\title{\large Young Researcher}               % optional, remove the line if not wanted
-\address{INRIA Rhône-Alpes, B108}{655 avenue de l'Europe}{Montbonnot - 38334 St Ismier, France}    % optional, remove the line if not wanted
-\phone{+33456527144}
-\mobile{+33607686704}                    % optional, remove the line if not wanted
-%\phone{phone (optional)}                      % optional, remove the line if not wanted
-%\fax{fax (optional)}                          % optional, remove the line if not wanted
-\email{damien.dosimont@imag.fr}                      % optional, remove the line if not wanted
-%\homepage{homepage (optional)}                % optional, remove the line if not wanted
-\homepage{http://moais.imag.fr/membres/damien.dosimont/}
-\extrainfo{\href{http://github.com/dosimont}{http://github.com/dosimont}}
-%\birth{Date of birth: 10 November, 1986} % optional, remove the line if not wanted TODO check
-%\extrainfo{French driving licence}
-
-%\photo[64pt]{picture}                         % '64pt' is the height the picture must be resized to and 'picture' is the name of the picture file; optional, remove the line if not wanted
-%\quote{Some quote (optional)}                 % optional, remove the line if not wanted
-
-% to show numerical labels in the bibliography; only useful if you make citations in your resume
-\makeatletter
-\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}
-\makeatother
-
-% bibliography with mutiple entries
-%\usepackage{multibib}
-%\newcites{book,misc}{{Books},{Others}}
-
-%\nopagenumbers{}                             % uncomment to suppress automatic page numbering for CVs longer than one page
+%\nopagenumbers{}
 %----------------------------------------------------------------------------------
 %            content
 %----------------------------------------------------------------------------------
 \begin{document}
 \maketitle
-\section{Experience}
-\cventry{2012--Present}{Beginning Researcher}{INRIA Rhône-Alpes}{Montbonnot Saint-Martin, 38330, France}{}{Embedded system software trace analysis based on visualization, aggregation and interaction techniques:
-\begin{itemize}
- \item Bibliography study on trace, information and scientific visualization domains
- \item Trace visualization tool design
- \item Two peer-reviewed publications
- \item Communications, work presentations
- \item Research reports writing
- \item Interaction with industrial partners (STMicroelectronics)
- \item Teachings in Polytech'Grenoble engineering school
-\end{itemize}
-}
-\cventry{2011 (6 months)}{Intern}{Thales Communications and Security, S.A.}{Colombes, 92700, France}{}{Performance studies and benchmarks realization for different types of software and hardware real-time and embedded architectures:
-\begin{itemize}
- \item Bibliography study on middlewares, lowpower scheduling, POSIX synchronization and communication mechanisms
- \item Lowpower algorithm implementation in an ORB benchmark and feasibility study 
- \item Multicore management integration in a POSIX synchronization and communication benchmark
- \item Test on various OS and hardware architecture to evaluate their POSIX implementation performance
- \item Technical reports and documentation writing
- \item Master thesis writing
-\end{itemize}
-}
-\cventry{2010 (2 Months)}{Research Engineer}{LIP6, Universit\'e Pierre et Marie Curie Paris VI}{Paris 5e, France}{}{Design space exploration of a telecommunication application on MPSoC (following a 6 month scholar project):
-\begin{itemize}
- \item Bibliography study on virtual prototyping and design space exploration
- \item Software and hardware architecture automatic generator tool design
- \item Performance analysis and choice of the better virtual architecture
- \item Major bugs in the design space exploration framework highlighting and correction
- \item Research report writing
-\end{itemize}
-}
 
-\section{Education}
-\cventry{2012--present}{PhD, Computer Science \textnormal{(ongoing)}}{Universit\'e Joseph Fourier}{Grenoble I}{}{\textbf{Thesis title}: Aggregation and multiscale visualization for embedded system software trace analysis\newline
-  \textbf{Advisers}: Dr. Guillaume Huard \& Dr. Jean-Marc Vincent}
-\cventry{2009--2011}{MSc, Computer Science}{Universit\'e Pierre et Marie Curie}{Paris VI}{\textit{with honours}}{specialism in Architecture and Conception of Integrated Systems}
-\cventry{2005--2009}{BSc, Electronics}{Universit\'e Pierre et Marie Curie}{Paris VI}{\textit{with honours}}{}
+\input{tex/contents/xp}
+\input{tex/contents/education}
+\input{tex/contents/research}
+\input{tex/contents/teaching}
+\input{tex/contents/language}
+\input{tex/contents/skills}
+\input{tex/contents/programming}
+\input{tex/contents/mainpublis}
+\input{tex/contents/references}
+\input{tex/contents/interests}
 
-\section{Research Interests}
 
-\subsection{Trace Visualization}
 
-\cvline{SoC-Trace Project}%
-{I work on the SoC-Trace project, which gathers academics like INRIA, LIG laboratory, and industrial partners like STMicroelectronics, Probayes or Magillem. The main objective of this project is to analyze multimedia application behavior, running on multicore architectures, and be able to detect behavior disruptions responsible of streaming flow perturbations. My research are related to visualization of traces provided by these software execution, and are mainly focused on aggregation and interaction solutions, in order to enable the analyst to deal with big amounts of data and screen limitations. The aim is to propose an overview technique solving both time and space scalability issues, used as an entry point to the analysis, and giving the user a way to focus on interesting parts of the trace.}
 
-\section{Teaching Experience}
-\subsection{Polytech'Grenoble Engineering School}
-\cvline{2012--2013}{\textbf{C++} practicals, E2I 4th year}
-\cvline{}{\textbf{Unix Project} practicals, 3I 4th year}
-\cvline{}{\textbf{APO} (Algorithmic and Object Programming) practicals, TIS 3rd year}
-\cvline{}{\textbf{AL} (Software Architecture) practicals, TIS 3rd year}
-
-%\section{Computer Science Skills}
-%\cvline{Systems}{\small \textbf{Unix/Linux} (Fedora, Ubuntu), \textbf{Windows} (7, Vista, XP)}
-%\cvline{Architectures}{\small \textbf{ARM} (Cortex A8, Cortex A9), \textbf{MIPS}, \textbf{x86}, \textbf{x64}}
-%\cvline{Softwares}{\small \textbf{Eclipse}, Xilinx, Altera Quartus, Modelsim, PSpice, Matlab, Office, Visio}
-%\cvline{Languages}{\small \textbf{C/C++}, \textbf{Java}, SystemC, Shell, Python, ASM, VHDL, VHDL-AMS, HTML, Lustre, Esterel}
-%\cvline{Key skills}{\small \textbf \textbf{Embedded systems architecture} (hardware, software), \textbf{POSIX}, middlewares, \textbf{virtual prototyping}, drivers, FPGA, VLSI, consumption}
-
-\section{Language Skills}
-\cvlanguage{French}{Mother Tongue}{}
-\cvlanguage{English}{Advanced}{}
-\cvlanguage{German}{Basic}{}
-
-\section{Programming Languages}
-\cvline{Main}{\small \textbf{C, C++, Java, Python}, Bash Shell, ASM, SystemC, VHDL, HTML}
-\cvline{Notions}{\small Esterel, Lustre, VHDL-AMS}
-
-\section{Publications}
-
-\cvline{[1]}%
-{\small G. Pagano, D. Dosimont, G. Huard, V. Marangozova-Martin, J-M. Vincent, Trace Management and Analysis for Embedded Systems, \emph{Proceedings of IEEE 7th International Symposium on Embedded Multicore/Many-core SoCs (MCSoC'13)},
-  (2013)}	
- % \href{http://dx.doi.org/10.1107/S0909049505012719}
- % {\color{color2}\homepagesymbol~doi:10.1107/S0909049505012719}}
-
-\cvline{[2]}%
-{\small D. Dosimont, G. Huard, J-M. Vincent,
-   La visualisation de traces, support à l'analyse, déverminage et optimisation d'applications de calcul haute performance, \emph{Actes de l'atelier Visualisation d'informations, interaction et fouille de données (VIF) de la 13e Conférence Francophone sur l'Extraction et la Gestion des Connaissances (EGC'2013)}, pp.55-66 (2013) (French)}
 
    
-\section{References}
-\subsection{Ph.D Thesis Advisers}
-\cvline{Guillaume Huard}%TODO complete
-{Associate Professor, Université Joseph Fourier, Grenoble I \newline
-INRIA Rhône-Alpes, B103, 655 avenue de l'Europe, Montbonnot - 38334 St Ismier, France\newline
-  %\phonesymbol\ 1-631-344-5177\quad
-  \href{mailto:guillaume.huard@imag.fr}{\emailsymbol\ \footnotesize\texttt{guillaume.huard\char64imag.fr}}}
-  \cvline{Jean-Marc Vincent}%TODO complete
-{Associate Professor, Université Joseph Fourier, Grenoble I \newline
-INRIA Rhône-Alpes, B218, 655 avenue de l'Europe, Montbonnot - 38334 St Ismier, France\newline
-  %\phonesymbol\ 1-631-344-5177\quad
-  \href{mailto:jean-marc.vincent@imag.fr}{\emailsymbol\ \footnotesize\texttt{jean-marc.vincent\char64imag.fr}}}
-
-  \subsection{Academic Internship Advisers}
-\cvline{Daniela Genius}%
-{Associate Professor, Université Pierre et Marie Curie, Paris VI\newline
-Maison de la Pedagogie, A004, 
-4 Place Jussieu, Paris 5ème\newline
-  %\phonesymbol\ 1-631-344-4247\quad
-  \href{mailto:daniela.genius@lip6.fr}{\emailsymbol\ \footnotesize\texttt{daniela.genius\char64lip6.fr}}}
-  
-  \cvline{Emmanuelle Encrenaz}%
-{Associate Professor, Université Pierre et Marie Curie, Paris VI\newline
-Maison de la Pedagogie, A114, 
-4 Place Jussieu, Paris 5ème\newline
-  %\phonesymbol\ 1-631-344-4247\quad
-  \href{mailto:emmanuelle.encrenze@lip6.fr}{\emailsymbol\ \footnotesize\texttt{emmanuelle.encrenaz\char64lip6.fr}}}
-  
-\subsection{Professional Internship Adviser}
-\cvline{Julien Maréchal}%TODO check
-{Software Engineer, Thales Communications and Security, S.A.\newline
-  4 Avenue des Louvresses, 92230 Gennevilliers\newline
-  %\phonesymbol\ 1-631-344-4247\quad
-  \href{mailto:julien.marechal@thalesgroup.com}{\emailsymbol\ \footnotesize\texttt{julien.marechal\char64thalesgroup.com}}}
 
 
-\section{Interests}
-\cvline{Technologies}{\small Video games, programming}
-\cvline{Music}{\small Computer music, guitar, bass guitar, saxophon}
-\cvline{Sports}{\small Mountain bike, running}
-\cvline{Literature}{\small Science fiction, classical, detective novels}
+
+
 
 %\section{Extra 1}
 %\cvlistitem{Item 1}
