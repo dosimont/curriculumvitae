@@ -1,0 +1,38 @@
+%\section{Extra 1}
+%\cvlistitem{Item 1}
+%\cvlistitem{Item 2}
+%\cvlistitem[+]{Item 3}            % optional other symbol
+
+\renewcommand{\listitemsymbol}{-} % change the symbol for lists
+
+%\section{Extra 2}
+%\cvlistdoubleitem{Item 1}{Item 4}
+%\cvlistdoubleitem{Item 2}{Item 5 \cite{book1}}
+%\cvlistdoubleitem{Item 3}{}
+
+% Publications from a BibTeX file without 
+% multibib\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}% for 
+% BibTeX numerical labels
+% \nocite{*}
+% \bibliographystyle{plain}
+% \bibliography{bib/mypapers}       % 'publications' is the name of a BibTeX
+
+% Publications from a BibTeX file using the multibib package
+\section{Publications}
+\nociteic{dosimont_spatiotemporal_2014,dosimont_efficient_2014, 
+pagano_trace_2013-1}
+\bibliographystyleic{plainyrrev}
+\bibliographyic{bib/mypapers}
+
+\nociteiw{dosimont_combining_2014}
+\bibliographystyleiw{plainyrrev}
+\bibliographyiw{bib/mypapers}
+
+\nocitefw{dosimont_agregation_2014,dosimont_visualisation_2013}
+\bibliographystylefw{plainyrrev}
+\bibliographyfw{bib/mypapers}
+
+\nociterep{dosimont_trace_2014,pagano_trace_2013}
+\bibliographystylerep{plainyrrev}
+\bibliographyrep{bib/mypapers}
+

@@ -15,11 +15,10 @@ TEXSRC = $(wildcard *.tex)
 TEXSUBSRC = $(wildcard $(TEXSUBDIR)/*.tex)
 BIBSRC = $(wildcard $(BIBDIR)/*.bib)
 PDF = $(TEXSRC:.tex=.pdf)
-AUX = $(TEXSRC:.tex=.aux)
-BBL = $(TEXSRC:.tex=.bbl)
+
 
 TEXCOMPILE = $(TEX) $(TEXSRC)
-BIBCOMPILE = $(BIB) $(AUX)
+
 
 all : all-bib-default
 
@@ -38,12 +37,11 @@ $(PDF) : $(TEXSRC) $(TEXSUBSRC) $(BIBSRC)
 	$(TEXCOMPILE)
 	$(TEXCOMPILE)
 
-bib-default : $(PDF) $(AUX)
-	$(BIBCOMPILE)
+bib-default : $(PDF)
+	i="$(shell ls *.aux)"; for j in $$i; do $(BIB) $$j; done
 
-finalize : $(AUX) $(BBL)
+finalize :
 	$(TEXCOMPILE)
-	$(MKINDEX)
 	$(TEXCOMPILE)
 	$(TEXCOMPILE)
 
