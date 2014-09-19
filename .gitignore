@@ -108,6 +108,9 @@ sympy-plots-for-*.tex/
 # xindy
 *.xdy
 
+#perso
+tex/def/version.tex
+
 #other
 *~
 *backup
