@@ -2,6 +2,7 @@
 \input{tex/def/packages}
 \input{tex/def/geometry}
 \input{tex/def/bibsettings}
+\input{tex/def/versionsettings}
 
 \input{tex/contents/info}
 
@@ -13,25 +14,29 @@
 \maketitle
 
 \input{tex/contents/xp}
+\vfill
 \input{tex/contents/education}
-\input{tex/contents/research}
-\input{tex/contents/teaching}
-\input{tex/contents/language}
-\input{tex/contents/skills}
-\input{tex/contents/programming}
+\vfill
 \input{tex/contents/mainpublis}
-\input{tex/contents/references}
+
+\input{tex/contents/research}
+\vfill
+\input{tex/contents/teaching}
+\vfill
+\input{tex/contents/language}
+\vfill
+\input{tex/contents/skills}
+\vfill
+\input{tex/contents/programming}
+\vfill
 \input{tex/contents/interests}
+\newpage
+\input{tex/contents/references}
+%\input{tex/contents/listofpublis}
 
 
-
-
-
-   
-
-
-
-
+\vfill
+Version: \version
 
 %\section{Extra 1}
 %\cvlistitem{Item 1}
@@ -46,9 +51,9 @@
 %\cvlistdoubleitem{Item 3}{}
 
 % Publications from a BibTeX file without multibib\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}% for BibTeX numerical labels
-%\nocite{*}
-%\bibliographystyle{plain}
-%\bibliography{publications}       % 'publications' is the name of a BibTeX file
+\nocite{*}
+\bibliographystyle{plain}
+\bibliography{publications}       % 'publications' is the name of a BibTeX file
 
 % Publications from a BibTeX file using the multibib package
 %\section{Publications}
