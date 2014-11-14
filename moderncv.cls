@@ -227,6 +227,8 @@
 % defines one's title (optional)
 % usage: \title{<title>}
 \renewcommand*{\title}[1]{\def\@title{#1}}
+\newcommand*{\domain}[1]{\def\@domain{#1}}
+\newcommand*{\objective}[1]{\def\@objective{#1}}
 
 % defines one's address (optional)
 % usage: \address{<street>}{<city>}{<country>}
