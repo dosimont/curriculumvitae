@@ -1,6 +1,6 @@
 # Makefile
 
-TEX = pdflatex
+TEX = xelatex
 BIB = bibtex
 
 TEXDIR = tex

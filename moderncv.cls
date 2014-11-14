@@ -52,7 +52,8 @@
 
 % font type options
 \DeclareOption{sans}{\AtBeginDocument{\renewcommand{\familydefault}{\sfdefault}}}
-\DeclareOption{roman}{\AtBeginDocument{\renewcommand{\familydefault}{\rmdefault}}}
+\DeclareOption{roman}{\AtBeginDocument{\renewcommand{\familydefault}{\rmdefault}
+}}
 
 % draft/final option
 \DeclareOption{draft}{\setlength\overfullrule{5pt}}
