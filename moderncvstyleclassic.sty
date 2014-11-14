@@ -173,6 +173,13 @@
     \raggedleft\hintstyle{#2} &{#3}%
   \end{tabular}%
   \par\addvspace{#1}}
+  
+  \newcommand{\cvite}[3][.25em]{%
+\begin{tabular}{@{}p{\linewidth}@{\hspace{\separatorcolumnwidth}}p{
+\maincolumnwidth}@{}}%
+    \raggedright\textbf{#2} &{#3}%
+  \end{tabular}%
+  \par\addvspace{#1}}
 
 \renewcommand*{\cvdoubleitem}[5][.25em]{%
  \cvitem[#1]{#2}{%

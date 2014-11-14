@@ -168,11 +168,33 @@
   \end{tabular}%
   \par\nobreak\addvspace{0.5ex}\@afterheading}% to avoid a pagebreak after the heading
 
-\renewcommand*{\cvitem}[3][.25em]{%
-  \begin{tabular}{@{}p{\hintscolumnwidth}@{\hspace{\separatorcolumnwidth}}p{\maincolumnwidth}@{}}%
+\renewcommand*{\cvitem}[3][.25em]{%  
+\begin{tabular}{@{}p{\hintscolumnwidth}@{\hspace{\separatorcolumnwidth}}p{
+\maincolumnwidth}@{}}%
     \raggedleft\hintstyle{#2} &{#3}%
   \end{tabular}%
   \par\addvspace{#1}}
+  
+    \newcommand{\cvite}[1]{%
+\begin{tabular}{@{}p{\hintscolumnwidth}@{\hspace{\separatorcolumnwidth}}p{
+\maincolumnwidth}@{}}%
+  \raggedleft\hintstyle{ } &{#1}%
+  \end{tabular}%
+  \par\addvspace{.25em}}
+  
+      \newcommand{\cvita}[2]{%
+\begin{tabular}{@{}p{\widthof{#1}}@{\hspace{\separatorcolumnwidth}}p{
+\maincolumnwidth+\hintscolumnwidth-\widthof{#1}}@{}}%
+  \raggedleft\hintstyle{#1} &{#2}%
+  \end{tabular}%
+  \par\addvspace{.25em}}
+  
+       \newcommand{\cvito}[2]{%
+\begin{tabular}{@{}p{\hintscolumnwidth}@{\hspace{\separatorcolumnwidth}}p{
+\maincolumnwidth}@{}}%
+  \raggedright\hintstyle{#1} &{#2}%
+  \end{tabular}%
+  \par\addvspace{.25em}}
 
 \renewcommand*{\cvdoubleitem}[5][.25em]{%
  \cvitem[#1]{#2}{%
@@ -198,14 +220,36 @@
     \ifthenelse{\equal{#4}{}}{}{, {\slshape#4}}%
     \ifthenelse{\equal{#5}{}}{}{, #5}%
     \ifthenelse{\equal{#6}{}}{}{, #6}%
-    .\strut%
-    \ifx&#7&%
-      
+    \strut%
+    \ifx&#7&%   
 \else{\newline{}\begin{minipage}[t]{\linewidth}\small#7\end{minipage}}\fi}}
 
-\renewcommand*{\cventry2}[2][.25em]{%
-\newline{}\begin{minipage}[t]{\linewidth}\textbf{#1}\small{#2}\end{minipage}}}
-}
+ 
+  \newcommand{\cventr}[2]{%
+     \color{color2}\rule{10mm}{0.6ex}\hspace*{
+ \separatorcolumnwidth}\color{color0}\textbf{#1}\\
+  \cvite{
+  \strut\ifx&#2&%   
+\else{\begin{minipage}[t]{\linewidth}\small#2\end{minipage}}\fi}}
+
+  \newcommand{\cventra}[2]{%
+  \cvita{\color{color2}\rule{10mm}{0.6ex}\hspace*{
+ \separatorcolumnwidth}\color{color0}\textbf{#1}}{
+  \strut\ifx&#2&%   
+\else{\begin{minipage}[t]{\linewidth}\small#2\end{minipage}}\fi}}
+
+ \newcommand{\cventro}[2]{%
+  \cvito{\color{color2}\rule{10mm}{0.6ex}\hspace*{
+ \separatorcolumnwidth}\color{color0}\textbf{#1}}{
+  \strut\ifx&#2&%   
+\else{\begin{minipage}[t]{\linewidth}\small#2\end{minipage}}\fi}}
+% \newcommand*{\cventro}[2]{%
+% \begin{minipage}[t]{\linewidth}\color{color2}\rule{10mm}{0.6ex}\hspace*{
+% \separatorcolumnwidth}\color{color0}\textbf{#1}
+% \\
+% \begin{minipage}[h]{
+% \linewidth-10mm } \small {#2} \end{minipage} \end{minipage}
+% \par\nobreak\addvspace{0.5ex}\@afterheading}
 
 \newbox{\cvitemwithcommentmainbox}
 \newlength{\cvitemwithcommentmainlength}
