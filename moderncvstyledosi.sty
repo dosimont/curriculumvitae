@@ -207,9 +207,10 @@
   \par\addvspace{1ex}%
   \phantomsection{}% reset the anchor for hyperrefs
   \addcontentsline{toc}{subsection}{#2}%
-  \begin{tabular}{@{}p{\hintscolumnwidth}@{\hspace{\separatorcolumnwidth}}p{\maincolumnwidth}@{}}%
-    \raggedleft\hintstyle{} &{\strut\subsectionstyle{#2}}%
-  \end{tabular}%
+%   \begin{tabular}{@{}p{\hintscolumnwidth}@{\hspace{\separatorcolumnwidth}}p{\maincolumnwidth}@{}}%
+%     \raggedleft\hintstyle{} &{\strut\subsectionstyle{#2}}%
+%   \end{tabular}%
+\subsectionstyle{#2}
   \par\nobreak\addvspace{0.5ex}\@afterheading}% to avoid a pagebreak after the heading
 
 \renewcommand*{\cvitem}[3][.25em]{%  
@@ -274,6 +275,10 @@
   \cvite{
   \strut\ifx&#2&%   
 \else{\begin{minipage}[t]{\linewidth}\small#2\end{minipage}}\fi}}
+
+  \newcommand{\cventre}[2]{%
+    \squareR\textbf{#1}\small#2
+  \normalsize}
 
   \newcommand{\cventra}[2]{%
   \cvita{\textbf{#1}}{

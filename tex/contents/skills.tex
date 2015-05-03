@@ -1,27 +1,42 @@
 
 \newcommand{\stw}{\phantom{ab}}
 
-\section{Research Skills}
-\cventr{Trace Visualization, Performance Analysis, Big Data}{
+\section{Research Interest}
+\subsection{Performance Analysis based on Trace Visualization}
+
+\cventre{Scalable overviews for trace analysis}{\\
+I designed \textbf{multidimensional overviews} that enable the behavior representation of voluminous traces, provided by \textbf{embedded} or \textbf{parallel} application executions, up to 100 GB and composed of billions of events. They are built upon information \textbf{theory measures}, in order to reduce the representation complexity while keeping the relevant information about the phenomena contained in the trace.}\\
+\cventre{Interaction and visual analytics}{\\
+I designed several interaction mechanisms to perform an analysis flow from these overviews. Navigating in the trace is possible through \textbf{zooming features} that keep also track of the position in the trace. \textbf{Statistics views} bring additional information on the selection. At last, switching to \textbf{more detailed views}, such as the Gantt chart, enables to refine the analysis and focus on a particular part of the trace.}\\
+\cventre{Software design and implementation of these methods}{
+I designed and implemented the visualization and interaction methods in the Eclipse plug-in Ocelotl. The aggregation is performed by an external library, LPAggreg.
 \begin{itemize}
- \item Scalable trace visualizations based on data aggregation 
-techniques built upon information theory measures
+\item \textbf{Ocelotl} - \emph{lead developper} - \link{http://soctrace-inria.github.io/ocelotl}
+\item \textbf{LPAggreg} library - \emph{lead developper}- \link{http://github.com/dosimont/lpaggreg}
 \end{itemize}
 }
+\subsection{Trace and Tool Management}
+\small I have also a sensibility to the trace storage and management problematics, as well as the issues related to the communication between tools to perform an analysis flow. I participated to the development of Framesoc, a trace analysis infrastructure that manages traces thanks to relational data bases and a generic data model.
+\begin{itemize}
+\item \textbf{Framesoc} - \emph{contributor} - \link{http://soctrace-inria.github.io/framesoc}
+\end{itemize}
+
+
+
+\section{Skills}
+% \cventr{Trace Visualization, Performance Analysis, Big Data}{
+% \begin{itemize}
+%  \item Scalable trace visualizations based on data aggregation 
+% techniques built upon information theory measures
+% \end{itemize}
+% }
 % \cventr{Communication}{
 % \begin{itemize}
 % \item 3 papers in international conferences, 3 papers in workshops, 3 research reports
 % \item Talks in several countries (Japan, Germany, Italy, Spain, France)
 % \end{itemize}
 % }
-\cventr{Software Design and Implementation}{\begin{itemize}
-\item \textbf{Ocelotl} tool : scalable visualizations for trace analysis - \emph{lead developper}
-\stw\link{http://soctrace-inria.github.io/ocelotl}
-\item \textbf{LPAggreg} library : multidimensional data aggregation - \emph{lead developper}
-\stw\link{http://github.com/dosimont/lpaggreg}
-\item \textbf{Framesoc} : trace management and analysis infrastructure - \emph{contributor}
-\stw\link{http://soctrace-inria.github.io/framesoc}
-\end{itemize}}
+
 % \cventr{Project Involvement}{
 % \begin{itemize}
 % \item Interaction with industrial partners, occasional 
@@ -34,8 +49,6 @@ techniques built upon information theory measures
 and Java 
 practicals (128 hours) \\at \emph{Polytech'Grenoble Engineering 
 School}\end{itemize}}
-
-\section{Technical Skills}
 % 
 % \cventr{Parallel Systems}{\begin{itemize}\item MPI, Computing Grid 
 % Experiments, Tracing \end{itemize}
@@ -43,7 +56,7 @@ School}\end{itemize}}
 \cventro{Programming}{\begin{itemize} \item 
 C/C++, Java, Shell, Python, Shell Unix, ASM, SystemC, 
 VHDL, HTML, \LaTeX, R \end{itemize}}
-\cventro{Tools}{\begin{itemize} \item Eclipse, Git/Github, SVN, GCC \end{itemize}}
+\cventro{Tools}{\begin{itemize} \item Eclipse, Git/Github, SVN, GCC, Make \end{itemize}}
 %\section{Computer Science Skills}
 % \cvline{Systems}{\small \textbf{Unix/Linux} (Fedora, Ubuntu), \textbf{Windows} 
 % (7, Vista, XP)}
