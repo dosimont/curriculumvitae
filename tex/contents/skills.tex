@@ -5,10 +5,10 @@
 \subsection{Performance Analysis based on Trace Visualization}
 
 \cventre{Scalable overviews for trace analysis}{\\
-I designed \textbf{multidimensional overviews} that enable the behavior representation of voluminous traces, provided by \textbf{embedded} or \textbf{parallel} application executions, up to 100 GB and composed of billions of events. They are built upon information \textbf{theory measures}, in order to reduce the representation complexity while keeping the relevant information about the phenomena contained in the trace.}\\
+I designed \textbf{multidimensional overviews} that enable the global behavior representation of voluminous execution traces, up to a 100 GB size and composed of billions of events. These overviews are built upon data aggregation based on information theory measures, to reduce the trace complexity but keep the relevant information. The level of details can be adjusted to show phenomena of different scales.}\\
 \cventre{Interaction and visual analytics}{\\
-I designed several interaction mechanisms to perform an analysis flow from these overviews. Navigating in the trace is possible through \textbf{zooming features} that keep also track of the position in the trace. \textbf{Statistics views} bring additional information on the selection. At last, switching to \textbf{more detailed views}, such as the Gantt chart, enables to refine the analysis and focus on a particular part of the trace.}\\
-\cventre{Software design and implementation of these methods}{
+I designed several interaction mechanisms to perform an analysis flow from these overviews. Navigation is performed through data zooming, while keeping track of the position in the trace. \textbf{Statistics views} bring additional information on a selection. At last, the user can switch to more detailed views on subparts of the trace to refine the analysis.}\\
+\cventre{Software design and implementation of these methods}{\\
 I designed and implemented the visualization and interaction methods in the Eclipse plug-in Ocelotl. The aggregation is performed by an external library, LPAggreg.
 \begin{itemize}
 \item \textbf{Ocelotl} - \emph{lead developper} - \link{http://soctrace-inria.github.io/ocelotl}
@@ -16,11 +16,14 @@ I designed and implemented the visualization and interaction methods in the Ecli
 \end{itemize}
 }
 \subsection{Trace and Tool Management}
-\small I have also a sensibility to the trace storage and management problematics, as well as the issues related to the communication between tools to perform an analysis flow. I participated to the development of Framesoc, a trace analysis infrastructure that manages traces thanks to relational data bases and a generic data model.
+\cventre{}{
+I am receptive to the \textbf{trace storage and management} problematics, as well as the issues related to the communication between tools to perform an \textbf{analysis flow}. I am involved in the development of a trace analysis infrastructure that uses relational data bases and a generic data model.
 \begin{itemize}
 \item \textbf{Framesoc} - \emph{contributor} - \link{http://soctrace-inria.github.io/framesoc}
 \end{itemize}
-
+}
+\subsection{Information Visualization}
+\cventre{}{In a general way, the methods I propose can be applied in other fields. I am interested to \textbf{enlarge my researches} to \textbf{other applications} whose structure and behavior over time are complex, such as biology, economics, finance...}
 
 
 \section{Skills}
@@ -45,10 +48,10 @@ I designed and implemented the visualization and interaction methods in the Ecli
 % \item Advising a research engineer
 % \end{itemize}
 % }
-\cventro{Teaching}{\begin{itemize}\item Unix, Algorithmic, HCI, C/C++ 
-and Java 
-practicals (128 hours) \\at \emph{Polytech'Grenoble Engineering 
-School}\end{itemize}}
+% \cventro{Teaching}{\begin{itemize}\item Unix, Algorithmic, HCI, C/C++ 
+% and Java 
+% practicals (128 hours) \\at \emph{Polytech'Grenoble Engineering 
+% School}\end{itemize}}
 % 
 % \cventr{Parallel Systems}{\begin{itemize}\item MPI, Computing Grid 
 % Experiments, Tracing \end{itemize}
